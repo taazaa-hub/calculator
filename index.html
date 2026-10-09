@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Тооны машин</h1>
+
+        <!-- main.js доторх document.getElementById('display')-д таарсан input -->
+        <input type="text" id="display" class="display" value="0" readonly>
+
+        <div class="buttons">
+            <!-- Эгнээ 1 -->
+            <button class="clear" onclick="clearAll()">C</button>
+            <button class="function" onclick="changeSign()">+/-</button>
+            <button class="function" onclick="percent()">%</button>
+            <button class="operator" onclick="appendDisplay('/')">÷</button>
+
+            <!-- Эгнээ 2 -->
+            <button onclick="appendDisplay('7')">7</button>
+            <button onclick="appendDisplay('8')">8</button>
+            <button onclick="appendDisplay('9')">9</button>
+            <button class="operator" onclick="appendDisplay('*')">×</button>
+
+            <!-- Эгнээ 3 -->
+            <button onclick="appendDisplay('4')">4</button>
+            <button onclick="appendDisplay('5')">5</button>
+            <button onclick="appendDisplay('6')">6</button>
+            <button class="operator" onclick="appendDisplay('-')">−</button>
+
+            <!-- Эгнээ 4 -->
+            <button onclick="appendDisplay('1')">1</button>
+            <button onclick="appendDisplay('2')">2</button>
+            <button onclick="appendDisplay('3')">3</button>
+            <button class="operator" onclick="appendDisplay('+')">+</button>
+
+            <!-- Эгнээ 5 -->
+            <button onclick="appendDisplay('0')">0</button>
+            <button onclick="appendDisplay('.')">.</button>
+            <button class="function" onclick="deleteLast()">⌫</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <!-- js/main.js файлыг холбосон хэсэг -->
+    <script src="js/main.js"></script>
+</body>
+</html>
